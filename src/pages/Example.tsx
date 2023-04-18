@@ -1,15 +1,13 @@
 import Header from "../components/GeneralHeader&&Footer/Header";
-import LogIn from "./LogIn";
-import CheckIn from "./CheckIn";
 import Footer from "../components/GeneralHeader&&Footer/Footer";
+import BodyHome from "../components/Home/BodyHome";
 
 export default function Example() {
   return (
     <>
     <div className="container text-center">
-        <Header title="Example"/>
-        <LogIn/>
-        <CheckIn/>
+        <Header/>
+        <BodyHome/>
         <Footer/>
     </div>
     </>
