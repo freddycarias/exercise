@@ -8,7 +8,7 @@ export default function Header() {
           My Web
         </div>
         <div className="col-4" style={{ textAlign: "right"}}>
-          <Button btn={"btn btn-outline-success"} route={'/undefine1'} inside={"Log in"}/>
+          <Button btn={"btn btn-outline-success"} route={'/login'} inside={"Log in"}/>
           <Button btn={"btn btn-outline-primary"} route={'/undefine2'} inside={"Check in"}/>
         </div>
       </div>
