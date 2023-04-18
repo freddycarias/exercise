@@ -1,24 +1,103 @@
+import { CgHome } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 
-type HeaderProps = {
-    title?: string;
-}
-
-export default function Header({ title }: HeaderProps) {
-    const navigate = useNavigate();
+export default function Header() {
+    const navigate = useNavigate(); 
     return (
-        <header>
-            <div className="title">
-                <div className="row justify-content-start">
-                    <div className="col-4" style={{ "textAlign": "left" }}>
-                        <h4>Home</h4>
-                        <button type="button" className="btn btn-danger" onClick={() => navigate("/main")}>return</button>
-                    </div>
-                    <div className="col-4">
-                        <h1>{title}</h1>
-                    </div>
-                </div>
+      <header>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <a className="navbar-brand" onClick={() => navigate("/main")} style={{cursor:"pointer"}}>
+              <CgHome />
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{cursor:"pointer"}}>
+                <li className="nav-item">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    onClick={() => navigate("/main")}
+                  >
+                    Phones
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" onClick={() => navigate("/main")}>
+                    Headphones
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Watches
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        onClick={() => navigate("/main")}
+                      >
+                        Masculine
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        onClick={() => navigate("/main")}
+                      >
+                        Feminine
+                      </a>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        onClick={() => navigate("/main")}
+                      >
+                        Unixes
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link disabled">Tablets</a>
+                </li>
+              </ul>
+              <form className="d-flex" role="search">
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button className="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
             </div>
-        </header>
+          </div>
+        </nav>
+      </header>
     );
 }
