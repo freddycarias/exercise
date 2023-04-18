@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import LogInParts from "../components/Login&Checking/LogIn/LILabels&&Inputs";
 
 
 export default function LogIn() {
@@ -19,65 +20,7 @@ export default function LogIn() {
                 style={{padding: "10px"}}
               />
               <div>
-                <form
-                  onSubmit={() => navigate("/main", { replace: true })}
-                  style={{ width: "500px" }}
-                  className="mx-auto"
-                >
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="inputPassword3-3"
-                      className="col-sm-2 col-form-label"
-                    >
-                      Email
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputPassword3-3"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="inputPassword3-2"
-                      className="col-sm-2 col-form-label"
-                    >
-                      Password
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="password"
-                        className="form-control"
-                        id="inputPassword3-2"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckCheckedDisabled"
-                      checked
-                      disabled
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexCheckCheckedDisabled"
-                    >
-                      Accept term and conditions
-                    </label>
-                  </div>
-                  <div>
-                    <button type="submit" className="btn btn-primary">
-                      Sign In
-                    </button>
-                  </div>
-                </form>
+              <LogInParts/>
               </div>
             </div>
           </div>
