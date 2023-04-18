@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import LogInParts from "../components/Login&Checking/LogIn/LILabels&&Inputs";
 
 
 export default function LogIn() {
-    const navigate = useNavigate();
     return (
       <>
         <div
