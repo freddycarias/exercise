@@ -5,6 +5,7 @@ import LogIn from "../pages/LogIn";
 import CheckIn from "../pages/CheckIn";
 import MainPage from "../pages/MainPage";
 import Phone from "../pages/Phones";
+import HeadPhones from "../pages/HeadPhones";
 
 export default function RoutesPage() {
   return (
@@ -15,6 +16,7 @@ export default function RoutesPage() {
             <Route path="/checkin" element={<CheckIn/>}/>
             <Route path="/main" element={<MainPage/>}/>
             <Route path="/phones" element={<Phone/>}/>
+            <Route path="/headphones" element={<HeadPhones/>}/>
             <Route path="/example" element={<Example/>}/>
         </Routes>
     </BrowserRouter>
