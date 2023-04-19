@@ -1,4 +1,4 @@
-const Cards = () => {
+export const CardsBody = () => {
   return (
     <>
       <div className="col">
@@ -22,21 +22,4 @@ const Cards = () => {
   );
 }
 
-
-export default function CardsBody() {
-  return (
-    <div>
-      <div className="container px-4 text-center">
-        <div className="row gx-5">
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-        </div>
-      </div>
-    </div>
-  );
-}
   
