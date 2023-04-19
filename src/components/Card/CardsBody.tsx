@@ -1,10 +1,14 @@
-export const CardsBody = () => {
+type Props = {
+  src : string;
+}
+
+export const CardsBody = ({ src }: Props) => {
   return (
     <>
       <div className="col">
         <div className="p-3">
           <div className="card" style={{ width: "18rem" }}>
-            <img src="https://media.cnn.com/api/v1/images/stellar/prod/allbirds-sneakers-review-wool-runnerjpg.jpg?q=h_1090,w_1938,x_0,y_0" className="card-img-top" alt="..." />
+            <img src={src} className="card-img-top" alt="img" />
             <div className="card-body">
               <h5 className="card-title">Card with stretched link</h5>
               <p className="card-text">
