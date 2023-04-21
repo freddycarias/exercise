@@ -1,13 +1,16 @@
 import Header from "../components/GeneralHeader&&Footer/Header/Header";
 import Footer from "../components/GeneralHeader&&Footer/Footer/Footer";
-import BodyHome from "../components/Home/BodyHome";
+import BodyExample from "../components/Example/BodyExample";
+import BodyPhones from "../components/BodyCards/Phones/BodyPhones";
+
 
 export default function Example() {
   return (
     <>
     <div className="container text-center">
         <Header/>
-        <BodyHome/>
+        <BodyExample/>
+        <BodyPhones/>
         <Footer/>
     </div>
     </>

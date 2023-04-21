@@ -1,10 +1,3 @@
-import {
-  TiSocialYoutube,
-  TiSocialTwitter,
-  TiSocialInstagram,
-  TiSocialFacebook,
-} from "react-icons/ti";
-import { TbBrandTiktok } from "react-icons/tb";
 import ContactUs from "./ContactUs";
 
 type FooterProps = {
