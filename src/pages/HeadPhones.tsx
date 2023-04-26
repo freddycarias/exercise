@@ -1,15 +1,15 @@
-import BodyHeadphones from "../components/BodyCards/HeadPhones/BodyHeadphones";
-import Footer from "../components/GeneralHeader&&Footer/Footer/Footer";
-import Header from "../components/GeneralHeader&&Footer/Header/Header";
+import ListHeadPhone from "../components/AllAboutListProduct/TypeOfProduct/HeadPhones/ListHeadPhone";
+import Footer from "../Layouts/Footer/Footer";
+import Header from "../Layouts/Header/Header";
 
 export default function HeadPhones() {
   return (
     <>
-    <div className="container text-center">
-      <Header/>
-      <BodyHeadphones/>
-      <Footer/>
-    </div>
-  </>
-  )
+      <div className="container text-center">
+        <Header />
+        <ListHeadPhone />
+        <Footer />
+      </div>
+    </>
+  );
 }

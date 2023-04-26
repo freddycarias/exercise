@@ -1,18 +1,14 @@
-import Header from "../components/GeneralHeader&&Footer/Header/Header";
-import Footer from "../components/GeneralHeader&&Footer/Footer/Footer";
-import BodyExample from "../components/Example/BodyExample";
-import BodyPhones from "../components/BodyCards/Phones/BodyPhones";
-
+import Header from "../Layouts/Header/Header";
+import Footer from "../Layouts/Footer/Footer";
+import BodyExample4 from "../components/Example/BodyExample4";
+import { PRODUCTS } from "../components/Example/ListExample";
 
 export default function Example() {
   return (
     <>
-    <div className="container text-center">
-        <Header/>
-        <BodyExample/>
-        <BodyPhones/>
-        <Footer/>
-    </div>
+      <Header />
+      <BodyExample4 products={PRODUCTS} />
+      <Footer />
     </>
-  )
+  );
 }

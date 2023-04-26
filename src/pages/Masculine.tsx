@@ -1,15 +1,15 @@
-import BodyPhones from "../components/BodyCards/Watches/BodyWatchesM";
-import Footer from "../components/GeneralHeader&&Footer/Footer/Footer";
-import Header from "../components/GeneralHeader&&Footer/Header/Header";
+import ListWatchesM from "../components/AllAboutListProduct/TypeOfProduct/Watches/ListWatchesM";
+import Footer from "../Layouts/Footer/Footer";
+import Header from "../Layouts/Header/Header";
 
 export default function Masculine() {
   return (
     <>
-    <div className="container text-center">
-        <Header/>
-        <BodyPhones/>
-        <Footer/>
+      <div className="container text-center">
+        <Header />
+        <ListWatchesM />
+        <Footer />
       </div>
     </>
-  )
+  );
 }

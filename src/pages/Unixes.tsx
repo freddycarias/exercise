@@ -1,15 +1,15 @@
-import BodyWatchesU from "../components/BodyCards/Watches/BodyWatchesU";
-import Footer from "../components/GeneralHeader&&Footer/Footer/Footer";
-import Header from "../components/GeneralHeader&&Footer/Header/Header";
+import ListWatchesU from "../components/AllAboutListProduct/TypeOfProduct/Watches/ListWatchesU";
+import Footer from "../Layouts/Footer/Footer";
+import Header from "../Layouts/Header/Header";
 
 export default function Unixes() {
   return (
     <>
-    <div className="container text-center">
-        <Header/>
-        <BodyWatchesU/>
-        <Footer/>
+      <div className="container text-center">
+        <Header />
+        <ListWatchesU />
+        <Footer />
       </div>
     </>
-  )
+  );
 }
