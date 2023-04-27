@@ -1,4 +1,5 @@
-import { ListProduct, ListProps } from "./AllListProductOnSale";
+import { useState } from "react";
+import { ListProduct, ListProps } from "../AllAboutListProduct/AllListProductOnSale";
 
 function ProductContainer({
   product,
@@ -41,7 +42,17 @@ export default function PartsOfProductContainer({
   nameProduct,
   gender,
 }: ListProps) {
-  const lists = products.map((product) => (
+  const [filterText, setFilterText] = useState("");
+
+  const handleFilterTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFilterText(event.target.value);
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(filterText.toLowerCase())
+  );
+
+  const filteredLists = filteredProducts.map((product) => (
     <ProductContainer
       product={product}
       key={product.id}
@@ -51,7 +62,16 @@ export default function PartsOfProductContainer({
   ));
   return (
     <div className="container px-4 text-center">
-      <div className="row gx-5">{lists}</div>
+      <div className="filter-section">
+        <input
+          type="text"
+          value={filterText}
+          onChange={handleFilterTextChange}
+          placeholder="Search"
+        />
+        
+      </div>
+      <div className="row gx-5">{filteredLists}</div>
     </div>
   );
 }
