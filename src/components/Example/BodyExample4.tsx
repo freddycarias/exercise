@@ -1,30 +1,78 @@
-import { Props } from "./ListExample";
+import { useState } from "react";
+import { ListProduct, ListProps } from "../AllAboutListProduct/AllListProductOnSale";
 
-export default function BodyExample4(props: Props) {
-  const lists = props.products.map((product) => (
-    <div className="col" key={product.id}>
-      <div className="p-3">
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={product.src}
-            className="card-img-top"
-            alt="img"
-            style={{ width: "287px", height: "200px" }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">{product.name}</h5>
-            <p className="card-text">{product.price}</p>
-            <a href="#" className="btn btn-primary stretched-link">
-              {product.stocked ? "Yes" : "No"}
-            </a>
+function ProductContainer({
+  product,
+  nameProduct,
+  gender,
+}: {
+  product: ListProduct;
+  nameProduct: string;
+  gender?: string;
+}) {
+  if (
+    (product.category === nameProduct && product.gender === gender)
+  ) {
+    return (
+      <div className="col">
+        <div className="p-3">
+          <div className="card" style={{ width: "18rem" }}>
+            <img
+              src={product.src}
+              className="card-img-top"
+              alt="img"
+              style={{ width: "287px", height: "200px" }}
+            />
+            {product.category}
+            <div className="card-body">
+              <h5 className="card-title">{product.name}</h5>
+              <p className="card-text">{product.price}</p>
+              <a className="btn btn-primary stretched-link">
+                {product.stocked ? "Yes" : "No"}
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    );
+  }
+  return <></>;
+}
+
+export default function PartsOfProductContainer({
+  products,
+  nameProduct,
+}: ListProps) {
+  const [filterText, setFilterText] = useState("");
+
+  const handleFilterTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFilterText(event.target.value);
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(filterText.toLowerCase())
+  );
+
+  const filteredLists = filteredProducts.map((product) => (
+    <ProductContainer
+      product={product}
+      key={product.id}
+      nameProduct={nameProduct}
+    />
   ));
+
   return (
     <div className="container px-4 text-center">
-      <div className="row gx-5">{lists}</div>
+      <div className="filter-section">
+        <input
+          type="text"
+          value={filterText}
+          onChange={handleFilterTextChange}
+          placeholder="Enter a product name"
+        />
+        
+      </div>
+      <div className="row gx-5">{filteredLists}</div>
     </div>
   );
 }
