@@ -18,7 +18,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 1,
     category: "HeadPhones",
-    name: "Apple",
+    name: "A",
     price: 500,
     stocked: true,
     src: "https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg",
@@ -26,7 +26,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 2,
     category: "Phone",
-    name: "Samsung",
+    name: "B",
     price: 500,
     stocked: false,
     src: "https://andro4all.com/hero/2020/05/Samsung-Galaxy-Z-Flip-pantalla-de-inicio.jpg?width=1200",
@@ -34,7 +34,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 3,
     category: "Watches",
-    name: "Apple",
+    name: "C",
     price: 700,
     stocked: true,
     src: "https://d2chqqff64diva.cloudfront.net//eyJidWNrZXQiOiJjbXMuc3RyYXBpLmZlc3RpbmFncm91cCIsImtleSI6InJlbG9qZXNfbXVqZXJfMDM5ZjYzMDdjZi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiaW5zaWRlIn19fQ==",
@@ -43,7 +43,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 4,
     category: "Watches",
-    name: "Apple",
+    name: "D",
     price: 700,
     stocked: true,
     src: "https://media.gq.com.mx/photos/63471cd850c7ecd84ad8790b/16:9/w_2560%2Cc_limit/relojes-de-colores-para-look-casual-de-hombre.png",
@@ -52,7 +52,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 5,
     category: "Watches",
-    name: "Apple",
+    name: "E",
     price: 800,
     stocked: true,
     src: "https://static.abc.es/media/summum/2020/08/24/zenithwatches-kjtH--1200x630@abc.jpg",
@@ -61,7 +61,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 6,
     category: "HeadPhones",
-    name: "Apple",
+    name: "F",
     price: 400,
     stocked: true,
     src: "https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg",
@@ -69,7 +69,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 7,
     category: "Phone",
-    name: "Samsung",
+    name: "G",
     price: 400,
     stocked: false,
     src: "https://andro4all.com/hero/2020/05/Samsung-Galaxy-Z-Flip-pantalla-de-inicio.jpg?width=1200",
@@ -77,7 +77,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 8,
     category: "Watches",
-    name: "Apple",
+    name: "H",
     price: 600,
     stocked: true,
     src: "https://d2chqqff64diva.cloudfront.net//eyJidWNrZXQiOiJjbXMuc3RyYXBpLmZlc3RpbmFncm91cCIsImtleSI6InJlbG9qZXNfbXVqZXJfMDM5ZjYzMDdjZi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiaW5zaWRlIn19fQ==",
@@ -86,7 +86,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 9,
     category: "Watches",
-    name: "Apple",
+    name: "I",
     price: 600,
     stocked: true,
     src: "https://media.gq.com.mx/photos/63471cd850c7ecd84ad8790b/16:9/w_2560%2Cc_limit/relojes-de-colores-para-look-casual-de-hombre.png",
@@ -95,7 +95,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 10,
     category: "Watches",
-    name: "Apple",
+    name: "J",
     price: 700,
     stocked: true,
     src: "https://static.abc.es/media/summum/2020/08/24/zenithwatches-kjtH--1200x630@abc.jpg",
@@ -104,7 +104,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 11,
     category: "HeadPhones",
-    name: "Apple",
+    name: "K",
     price: 600,
     stocked: true,
     src: "https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg",
@@ -112,7 +112,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 12,
     category: "Phone",
-    name: "Samsung",
+    name: "L",
     price: 600,
     stocked: false,
     src: "https://andro4all.com/hero/2020/05/Samsung-Galaxy-Z-Flip-pantalla-de-inicio.jpg?width=1200",
@@ -120,7 +120,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 13,
     category: "Watches",
-    name: "Apple",
+    name: "M",
     price: 800,
     stocked: true,
     src: "https://d2chqqff64diva.cloudfront.net//eyJidWNrZXQiOiJjbXMuc3RyYXBpLmZlc3RpbmFncm91cCIsImtleSI6InJlbG9qZXNfbXVqZXJfMDM5ZjYzMDdjZi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiaW5zaWRlIn19fQ==",
@@ -129,7 +129,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 14,
     category: "Watches",
-    name: "Apple",
+    name: "N",
     price: 800,
     stocked: true,
     src: "https://media.gq.com.mx/photos/63471cd850c7ecd84ad8790b/16:9/w_2560%2Cc_limit/relojes-de-colores-para-look-casual-de-hombre.png",
@@ -138,7 +138,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 15,
     category: "Watches",
-    name: "Apple",
+    name: "Ñ",
     price: 900,
     stocked: true,
     src: "https://static.abc.es/media/summum/2020/08/24/zenithwatches-kjtH--1200x630@abc.jpg",
@@ -147,7 +147,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 16,
     category: "HeadPhones",
-    name: "Apple",
+    name: "O",
     price: 500,
     stocked: true,
     src: "https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg",
@@ -155,7 +155,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 17,
     category: "Phone",
-    name: "Samsung",
+    name: "P",
     price: 500,
     stocked: false,
     src: "https://andro4all.com/hero/2020/05/Samsung-Galaxy-Z-Flip-pantalla-de-inicio.jpg?width=1200",
@@ -163,7 +163,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 18,
     category: "Watches",
-    name: "Apple",
+    name: "Q",
     price: 700,
     stocked: true,
     src: "https://d2chqqff64diva.cloudfront.net//eyJidWNrZXQiOiJjbXMuc3RyYXBpLmZlc3RpbmFncm91cCIsImtleSI6InJlbG9qZXNfbXVqZXJfMDM5ZjYzMDdjZi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiaW5zaWRlIn19fQ==",
@@ -172,7 +172,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 19,
     category: "Watches",
-    name: "Apple",
+    name: "R",
     price: 700,
     stocked: true,
     src: "https://media.gq.com.mx/photos/63471cd850c7ecd84ad8790b/16:9/w_2560%2Cc_limit/relojes-de-colores-para-look-casual-de-hombre.png",
@@ -181,7 +181,7 @@ export const LISTPRODUCTS: ListProduct[] = [
   {
     id: 20,
     category: "Watches",
-    name: "Apple",
+    name: "S",
     price: 800,
     stocked: true,
     src: "https://static.abc.es/media/summum/2020/08/24/zenithwatches-kjtH--1200x630@abc.jpg",
