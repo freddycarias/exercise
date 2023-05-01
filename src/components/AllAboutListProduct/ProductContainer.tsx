@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../../Layouts/Header/Header";
 import { ListProduct, ListProps } from "../AllAboutListProduct/AllListProductOnSale";
 
 function ProductContainer({
@@ -44,13 +45,9 @@ export default function PartsOfProductContainer({
 }: ListProps) {
   const [filterText, setFilterText] = useState("");
 
-  const handleFilterTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilterText(event.target.value);
-  };
-
   const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(filterText.toLowerCase())
-  );
+  product.name.toLowerCase().includes(filterText.toLowerCase())
+);
 
   const filteredLists = filteredProducts.map((product) => (
     <ProductContainer
@@ -61,17 +58,11 @@ export default function PartsOfProductContainer({
     />
   ));
   return (
-    <div className="container px-4 text-center">
-      <div className="filter-section">
-        <input
-          type="text"
-          value={filterText}
-          onChange={handleFilterTextChange}
-          placeholder="Search"
-        />
-        
+    <>
+      <Header ActualValue={filterText} setActualValue={setFilterText} />
+      <div className="container px-4 text-center">
+        <div className="row gx-5">{filteredLists}</div>
       </div>
-      <div className="row gx-5">{filteredLists}</div>
-    </div>
+    </>
   );
 }
