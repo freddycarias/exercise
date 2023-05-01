@@ -1,13 +1,13 @@
 import Header from "../Layouts/Header/Header";
+import BodyExample2 from "../components/Example/BodyExample2";
 import Footer from "../Layouts/Footer/Footer";
-import FilteredList from "../components/Example/BodyExample4";
-import { LISTPRODUCTS } from "../components/AllAboutListProduct/AllListProductOnSale";
+import { LISTPRODUCTSEXAMPLE } from "../components/Example/BodyExample2";
 
 export default function Example() {
   return (
     <>
       <Header />
-      <FilteredList nameProduct="Phone" products={LISTPRODUCTS}/>
+      <BodyExample2 listProduct={LISTPRODUCTSEXAMPLE}/>
       <Footer />
     </>
   );
