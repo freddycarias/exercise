@@ -23,7 +23,7 @@ function ProductContainer({
               style={{ width: "287px", height: "200px" }}
             />
             {product.category}
-            <div className="card-body">
+            <div className="card-body" style={{height: "220px"}}>
               <h5 className="card-title">{product.name}</h5>
               <p className="card-text">{product.price}</p>
               <a className="btn btn-primary stretched-link">
