@@ -6,8 +6,8 @@ export default function Header({
   ActualValue,
   setActualValue,
 }: {
-  ActualValue: string;
-  setActualValue: any;
+  ActualValue?: string;
+  setActualValue?: any;
 }) {
   const navigate = useNavigate();
   const valueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
