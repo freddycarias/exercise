@@ -6,7 +6,7 @@ export default function BodyWatchesF() {
     <div>
       <div className="container px-4 text-center">
         <div className="row gx-5">
-          <ProductContainer products={LISTPRODUCTS} nameProduct="Watches"  gender="femenine"/>
+          <ProductContainer products={LISTPRODUCTS} nameProduct="Watches"  gender="feminine"/>
         </div>
       </div>
     </div>
