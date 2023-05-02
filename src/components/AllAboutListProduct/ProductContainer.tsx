@@ -1,4 +1,4 @@
-import { useState, useMemo, ChangeEvent } from "react";
+import { useState, useMemo } from "react";
 import Header from "../../Layouts/Header/Header";
 import {
   ListProduct,
@@ -7,16 +7,16 @@ import {
 
 function ProductContainer({
   product,
-  nameProduct,
-  gender,
+  productName,
+  watchesFor,
 }: {
   product: ListProduct;
-  nameProduct: string;
-  gender?: string;
+  productName: string;
+  watchesFor?: string;
 }) {
   const shouldRender = useMemo(
-    () => product.category === nameProduct && product.gender === gender,
-    [product.category, nameProduct, product.gender, gender]
+    () => product.category === productName && product.watchesFor === watchesFor,
+    [product.category, productName, product.watchesFor, watchesFor]
   );
   if (!shouldRender) {
     return null;
@@ -31,7 +31,7 @@ function ProductContainer({
             alt="img"
             style={{ width: "287px", height: "200px" }}
           />
-          <div className="card-body" style={{ height: "220px" }}>
+          <div className="card-body" style={{ height: "200px" }}>
             <h5 className="card-title">{product.name}</h5>
             <p className="card-text">
               Some quick example text to build on the card title and make up the
@@ -40,9 +40,14 @@ function ProductContainer({
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">{product.price}</li>
-            <li className="list-group-item">{product.category}</li>
             <li className="list-group-item">
-              {product.stocked ? "In stock" : "Spent"}
+              {product.stocked ? (
+                <button className="btn btn-outline-info">In stock</button>
+              ) : (
+                <button className="btn btn-outline-secondary" disabled>
+                  Spent
+                </button>
+              )}
             </li>
           </ul>
         </div>
@@ -53,8 +58,8 @@ function ProductContainer({
 
 export default function PartsOfProductContainer({
   products,
-  nameProduct,
-  gender,
+  productName,
+  watchesFor,
 }: ListProps) {
   const [filterText, setFilterText] = useState("");
 
@@ -70,8 +75,8 @@ export default function PartsOfProductContainer({
     <ProductContainer
       product={product}
       key={product.id}
-      nameProduct={nameProduct}
-      gender={gender}
+      productName={productName}
+      watchesFor={watchesFor}
     />
   ));
   return (

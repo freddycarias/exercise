@@ -29,8 +29,8 @@ export default function PartsOfHeaderUl() {
   return (
     <>
       <ul className="dropdown-menu">
-        <PartsOfHeader routes={"/masculine"} product="Masculine" />
-        <PartsOfHeader routes={"/femenine"} product="Feminine" />
+        <PartsOfHeader routes={"/masculine"} product="Men" />
+        <PartsOfHeader routes={"/femenine"} product="Women" />
         <hr className="dropdown-divider" />
         <PartsOfHeader routes={"/unixes"} product="Unixes" />
       </ul>

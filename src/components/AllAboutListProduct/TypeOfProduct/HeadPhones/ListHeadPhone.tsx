@@ -5,7 +5,7 @@ export default function BodyHeadPhones() {
     <>
       <div className="container px-4 text-center">
         <div className="row gx-5">
-          <ProductContainer products={LISTPRODUCTS} nameProduct="HeadPhones" />
+          <ProductContainer products={LISTPRODUCTS} productName="HeadPhones" />
         </div>
       </div>
     </>
