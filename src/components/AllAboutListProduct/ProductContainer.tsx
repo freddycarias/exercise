@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useMemo, ChangeEvent } from "react";
 import Header from "../../Layouts/Header/Header";
-import { ListProduct, ListProps } from "../AllAboutListProduct/AllListProductOnSale";
+import {
+  ListProduct,
+  ListProps,
+} from "../AllAboutListProduct/AllListProductOnSale";
 
 function ProductContainer({
   product,
@@ -11,31 +14,35 @@ function ProductContainer({
   nameProduct: string;
   gender?: string;
 }) {
-  if (product.category === nameProduct && product.gender === gender) {
-    return (
-      <div className="col">
-        <div className="p-3">
-          <div className="card" style={{ width: "18rem" }}>
-            <img
-              src={product.src}
-              className="card-img-top"
-              alt="img"
-              style={{ width: "287px", height: "200px" }}
-            />
-            {product.category}
-            <div className="card-body" style={{height: "220px"}}>
-              <h5 className="card-title">{product.name}</h5>
-              <p className="card-text">{product.price}</p>
-              <a className="btn btn-primary stretched-link">
-                {product.stocked ? "Yes" : "No"}
-              </a>
-            </div>
+  const shouldRender = useMemo(
+    () => product.category === nameProduct && product.gender === gender,
+    [product.category, nameProduct, product.gender, gender]
+  );
+  if (!shouldRender) {
+    return null;
+  }
+  return (
+    <div className="col">
+      <div className="p-3">
+        <div className="card" style={{ width: "18rem" }}>
+          <img
+            src={product.src}
+            className="card-img-top"
+            alt="img"
+            style={{ width: "287px", height: "200px" }}
+          />
+          {product.category}
+          <div className="card-body" style={{ height: "220px" }}>
+            <h5 className="card-title">{product.name}</h5>
+            <p className="card-text">{product.price}</p>
+            <a className="btn btn-primary stretched-link">
+              {product.stocked ? "Yes" : "No"}
+            </a>
           </div>
         </div>
       </div>
-    );
-  }
-  return <></>;
+    </div>
+  );
 }
 
 export default function PartsOfProductContainer({
@@ -45,9 +52,13 @@ export default function PartsOfProductContainer({
 }: ListProps) {
   const [filterText, setFilterText] = useState("");
 
-  const filteredProducts = products.filter((product) =>
-  product.name.toLowerCase().includes(filterText.toLowerCase())
-);
+  const filteredProducts = useMemo(
+    () =>
+      products.filter((product) =>
+        product.name.toLowerCase().includes(filterText.toLowerCase())
+      ),
+    [products, filterText]
+  );
 
   const filteredLists = filteredProducts.map((product) => (
     <ProductContainer

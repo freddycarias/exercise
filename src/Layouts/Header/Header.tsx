@@ -2,17 +2,25 @@ import { useNavigate } from "react-router-dom";
 import { CgHome } from "react-icons/cg";
 import PartsOfHeaderUl from "./PartsOfHeaderUl";
 
+
+interface HeaderProps {
+  ActualValue?: string;
+  setActualValue?: React.Dispatch<React.SetStateAction<string>>;
+}
+
 export default function Header({
   ActualValue,
   setActualValue,
-}: {
-  ActualValue?: string;
-  setActualValue?: any;
-}) {
+}: HeaderProps) {
+
   const navigate = useNavigate();
-  const valueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setActualValue(e.target.value);
+
+  const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (setActualValue) {
+      setActualValue(e.target.value);
+    }
   };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -78,7 +86,7 @@ export default function Header({
               placeholder="Search"
               aria-label="Search"
               value={ActualValue}
-              onChange={valueChange}
+              onChange={handleValueChange}
             />
             <button className="btn btn-outline-success" type="submit">
               Search
