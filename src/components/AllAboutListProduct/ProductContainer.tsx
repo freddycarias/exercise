@@ -31,14 +31,20 @@ function ProductContainer({
             alt="img"
             style={{ width: "287px", height: "200px" }}
           />
-          {product.category}
           <div className="card-body" style={{ height: "220px" }}>
             <h5 className="card-title">{product.name}</h5>
-            <p className="card-text">{product.price}</p>
-            <a className="btn btn-primary stretched-link">
-              {product.stocked ? "Yes" : "No"}
-            </a>
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
           </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">{product.price}</li>
+            <li className="list-group-item">{product.category}</li>
+            <li className="list-group-item">
+              {product.stocked ? "In stock" : "Spent"}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
