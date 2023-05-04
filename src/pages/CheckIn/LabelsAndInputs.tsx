@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Check from "../../components/CheckBox/CheckL&C";
+import Check from "../../components/CheckBox/CheckLoginAndCheckin";
 
 type Props = {
   num: string;

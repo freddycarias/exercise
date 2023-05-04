@@ -1,4 +1,4 @@
-import Check from "../../components/CheckBox/CheckL&C";
+import Check from "../../components/CheckBox/CheckLoginAndCheckin";
 import { useNavigate } from "react-router-dom";
 import { useRef, useEffect, forwardRef } from "react";
 import { USERSLIST } from "./UsersList/UsersList";
