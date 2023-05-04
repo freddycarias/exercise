@@ -1,7 +1,7 @@
 import Check from "../../components/CheckBox/CheckL&C";
 import { useNavigate } from "react-router-dom";
 import { useRef, useEffect, forwardRef } from "react";
-import { USERSLIST } from "./CheckTheUser/UsersList";
+import { USERSLIST } from "./UsersList/UsersList";
 
 type LabelsInputsProps = {
   num: string;
@@ -51,18 +51,15 @@ export default function LogInParts() {
     );
 
     if (usuarioValido) {
-      // Redireccionar al usuario después de un breve retraso
       setTimeout(() => {
         navigate("/store", { replace: true });
       }, 500);
     } else {
-      // Mostrar mensaje de error utilizando alguna librería de notificaciones
       alert("Usuario inválido");
     }
   };
 
   useEffect(() => {
-    // Hacer foco en el campo de correo electrónico al cargar la página
     emailRef.current?.focus();
   }, []);
 

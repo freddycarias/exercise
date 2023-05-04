@@ -5,7 +5,7 @@ export default function BodyWatchesM() {
     <div>
       <div className="container px-4 text-center">
         <div className="row gx-5">
-          <ProductContainer products={LISTPRODUCTS} productName="Watches"  watchesFor="men"/>
+          <ProductContainer products={LISTPRODUCTS} categoryName="Watches"  watchesFor="men"/>
         </div>
       </div>
     </div>

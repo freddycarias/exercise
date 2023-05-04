@@ -1,6 +1,6 @@
 export interface ListProps {
   products: ListProduct[];
-  productName: string;
+  categoryName: string;
   watchesFor?: string;
 }
 

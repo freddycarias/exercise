@@ -7,16 +7,16 @@ import {
 
 function ProductContainer({
   product,
-  productName,
+  categoryName,
   watchesFor,
 }: {
   product: ListProduct;
-  productName: string;
+  categoryName: string;
   watchesFor?: string;
 }) {
   const shouldRender = useMemo(
-    () => product.category === productName && product.watchesFor === watchesFor,
-    [product.category, productName, product.watchesFor, watchesFor]
+    () => product.category === categoryName && product.watchesFor === watchesFor,
+    [product.category, categoryName, product.watchesFor, watchesFor]
   );
   if (!shouldRender) {
     return null;
@@ -58,7 +58,7 @@ function ProductContainer({
 
 export default function PartsOfProductContainer({
   products,
-  productName,
+  categoryName,
   watchesFor,
 }: ListProps) {
   const [filterText, setFilterText] = useState("");
@@ -75,7 +75,7 @@ export default function PartsOfProductContainer({
     <ProductContainer
       product={product}
       key={product.id}
-      productName={productName}
+      categoryName={categoryName}
       watchesFor={watchesFor}
     />
   ));
