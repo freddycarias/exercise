@@ -1,15 +1,7 @@
-
 import Check from "../../components/CheckBox/CheckL&C";
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
-import { forwardRef } from "react";
-
-const usuariosValidos = [
-  { email: "usuario1@example.com", password: "password1" },
-  { email: "usuario2@example.com", password: "password2" },
-
-];
-
+import { useRef, useEffect, forwardRef } from "react";
+import { USERSLIST } from "./CheckTheUser/UsersList";
 
 type LabelsInputsProps = {
   num: string;
@@ -49,19 +41,30 @@ export default function LogInParts() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const email = emailRef.current?.value;
-    const password = passwordRef.current?.value;
+    const emailValue = emailRef.current?.value;
+    const passwordValue = passwordRef.current?.value;
 
-    const usuarioValido = usuariosValidos.find(
-      (usuario) => usuario.email === email && usuario.password === password
+    const usuarioValido = USERSLIST.find(
+      (usuario) =>
+        usuario.userName === emailValue &&
+        usuario.userPassword === passwordValue
     );
 
     if (usuarioValido) {
-      navigate("/store", { replace: true });
+      // Redireccionar al usuario después de un breve retraso
+      setTimeout(() => {
+        navigate("/store", { replace: true });
+      }, 500);
     } else {
+      // Mostrar mensaje de error utilizando alguna librería de notificaciones
       alert("Usuario inválido");
     }
   };
+
+  useEffect(() => {
+    // Hacer foco en el campo de correo electrónico al cargar la página
+    emailRef.current?.focus();
+  }, []);
 
   return (
     <form
@@ -69,8 +72,18 @@ export default function LogInParts() {
       style={{ width: "500px" }}
       className="mx-auto"
     >
-      <LabelsInputs num={"1"} title={"Email"} type={"text"} ref={emailRef} />
-      <LabelsInputs num={"2"} title={"Password"} type={"password"} ref={passwordRef} />
+      <LabelsInputs
+        num={"1"}
+        title={"User or Email"}
+        type={"text"}
+        ref={emailRef}
+      />
+      <LabelsInputs
+        num={"2"}
+        title={"Password"}
+        type={"password"}
+        ref={passwordRef}
+      />
       <Check />
     </form>
   );
