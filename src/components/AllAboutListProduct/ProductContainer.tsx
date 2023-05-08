@@ -9,14 +9,16 @@ function ProductContainer({
   product,
   categoryName,
   watchesFor,
+  productHome
 }: {
   product: ListProduct;
-  categoryName: string;
+  categoryName?: string;
   watchesFor?: string;
+  productHome?: string
 }) {
   const shouldRender = useMemo(
-    () => product.category === categoryName && product.watchesFor === watchesFor,
-    [product.category, categoryName, product.watchesFor, watchesFor]
+    () => product.category === categoryName && product.watchesFor === watchesFor || product.productHome === productHome,
+    [product.category, categoryName, product.watchesFor, watchesFor,product.productHome,productHome]
   );
   if (!shouldRender) {
     return null;
@@ -60,6 +62,7 @@ export default function PartsOfProductContainer({
   products,
   categoryName,
   watchesFor,
+  productHome
 }: ListProps) {
   const [filterText, setFilterText] = useState("");
 
@@ -77,6 +80,7 @@ export default function PartsOfProductContainer({
       key={product.id}
       categoryName={categoryName}
       watchesFor={watchesFor}
+      productHome={productHome}
     />
   ));
   return (

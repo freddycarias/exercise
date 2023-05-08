@@ -1,13 +1,12 @@
 import Footer from "../Layouts/Footer/Footer";
-import Header from "../Layouts/Header/Header";
-import BodyHome from "./Home/Body/BodyHome";
+import { LISTPRODUCTS } from "../components/AllAboutListProduct/AllListProductOnSale";
+import PartsOfProductContainer from "../components/AllAboutListProduct/ProductContainer";
 
 export default function MainPage() {
   return (
     <>
       <div className="container text-center">
-        <Header />
-        <BodyHome />
+        <PartsOfProductContainer products={LISTPRODUCTS} productHome="allProducts"/>
         <Footer />
       </div>
     </>
