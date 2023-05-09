@@ -1,12 +1,10 @@
 import LabelsAndInputs from "./LabelsAndInputs";
+import "../../Styles/CheckIn.css"
 
 export default function CheckIn() {
   return (
     <div>
-      <div
-        className="container text-center border"
-        style={{ height: "530px", width: "600px", marginTop: "100px" }}
-      >
+      <div className="container text-center border container-check ">
         <div className="row">
           <div className="col">
             <img
@@ -14,7 +12,7 @@ export default function CheckIn() {
               alt="logo"
               width={100}
               height={100}
-              style={{ padding: "10px" }}
+              className="col-check"
             />
             <div>
               <LabelsAndInputs />

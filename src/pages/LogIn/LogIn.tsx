@@ -1,12 +1,10 @@
 import LabelAndInputs from "./LabelAndInputs";
+import "../../Styles/LogIn.css";
 
 export default function LogIn() {
   return (
-    <>
-      <div
-        className="container text-center border"
-        style={{ height: "300px", width: "600px", marginTop: "100px" }}
-      >
+    <div>
+      <div className="container text-center border login">
         <div className="row">
           <div className="col">
             <img
@@ -14,7 +12,7 @@ export default function LogIn() {
               alt="logo"
               width={100}
               height={100}
-              style={{ padding: "10px" }}
+              className="col-login"
             />
             <div>
               <LabelAndInputs />
@@ -22,6 +20,6 @@ export default function LogIn() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

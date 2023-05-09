@@ -5,14 +5,14 @@ export default function Header() {
     <div className="container text-center">
       <div className="row justify-content-end" style={{ paddingTop: "5px" }}>
         <div className="col-4">My Web</div>
-        <div className="col-4" style={{ textAlign: "right" }}>
+        <div className="col-4" style={{ textAlign: "right" , marginTop: "5px"}}>
           <Button
             btn={"btn btn-outline-success"}
             route={"/login"}
             inside={"Log in"}
           />
           <Button
-            btn={"btn btn-outline-primary"}
+            btn={"btn btn-outline-primary button-home"}
             route={"/checkin"}
             inside={"Check in"}
           />

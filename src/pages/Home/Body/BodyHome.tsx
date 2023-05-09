@@ -2,9 +2,8 @@ export default function BodyHome() {
   return (
     <div
       id="carouselExampleAutoplaying"
-      className="carousel slide"
+      className="carousel slide carousel-body"
       data-bs-ride="carousel"
-      style={{ marginTop: "10px" }}
     >
       <div className="carousel-inner">
         <div className="carousel-item active">
@@ -30,7 +29,7 @@ export default function BodyHome() {
         </div>
       </div>
       <button
-        className="carousel-control-prev"
+        className="carousel-control-prev carousel-body"
         type="button"
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="prev"
@@ -39,7 +38,7 @@ export default function BodyHome() {
         <span className="visually-hidden">Previous</span>
       </button>
       <button
-        className="carousel-control-next"
+        className="carousel-control-next carousel-body"
         type="button"
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="next"

@@ -2,6 +2,7 @@ import Check from "../../components/CheckBox/CheckLoginAndCheckin";
 import { useNavigate } from "react-router-dom";
 import React,{ useRef, useEffect, forwardRef } from "react";
 import { USERSLIST } from "./UsersList/UsersList";
+import "../../Styles/LogIn.css"
 
 type LabelsInputsProps = {
   num: string;
@@ -65,9 +66,9 @@ export default function LogInParts() {
   }, []);
 
   return (
+    
     <form
       onSubmit={handleSubmit}
-      style={{ width: "500px" }}
       className="mx-auto"
     >
       <LabelsInputs

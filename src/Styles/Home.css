@@ -1,0 +1,15 @@
+.carousel-body{
+  padding-top: 5px;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px)  {
+  .carousel-body{
+    padding-top: 150px;
+  }
+  .footer-container{
+    padding-top: 250px;
+  }
+  .button-home {
+    margin-top: 10px;
+  }
+}

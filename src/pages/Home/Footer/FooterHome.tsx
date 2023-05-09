@@ -1,7 +1,8 @@
+import "../../../Styles/Home.css"
 export default function FooterHome() {
   return (
     <>
-      <div className="container text-center">
+      <div className="container text-center footer-container">
         <div className="row align-items-end">
           <div className="col">
             Phone Number
