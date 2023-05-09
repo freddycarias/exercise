@@ -1,0 +1,14 @@
+.cart-icon {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  padding: 0;
+  position: fixed;
+  margin-top: 100px;
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+  .cart-icon{
+    width: 99%;
+    margin-top: 300px;
+  }
+}
