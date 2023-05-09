@@ -25,8 +25,8 @@ function ProductContainer({
   }
   return (
     <div className="col">
-      <div className="p-3">
-        <div className="card" style={{ width: "18rem" }}>
+      <div>
+        <div className="card" style={{ width: "18rem" , marginBottom: "15px"}}>
           <img
             src={product.src}
             className="card-img-top"
@@ -44,10 +44,10 @@ function ProductContainer({
             <li className="list-group-item">{product.price}</li>
             <li className="list-group-item">
               {product.stocked ? (
-                <button className="btn btn-outline-info">In stock</button>
+                <button className="btn btn-success">Add</button>
               ) : (
                 <button className="btn btn-outline-secondary" disabled>
-                  Spent
+                  out of stock
                 </button>
               )}
             </li>
@@ -87,7 +87,9 @@ export default function PartsOfProductContainer({
     <>
       <Header ActualValue={filterText} setActualValue={setFilterText} />
       <div className="container px-4 text-center">
-        <div className="row gx-5">{filteredLists}</div>
+        <div className="row gx-5">
+          {filteredLists}
+        </div>
       </div>
     </>
   );
